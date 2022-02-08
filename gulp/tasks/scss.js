@@ -12,7 +12,7 @@ const sass = gulpSass(dartSass)
 
 
 export const scss = ()=>{
-    return app.gulp.src(app.path.src.scss, {sourcemaos: true})
+    return app.gulp.src(app.path.src.scss, {sourcemaps: true})
         .pipe(app.plugins.plumber(
             app.plugins.notify.onError({
                 title: "SCSS",
@@ -28,6 +28,14 @@ export const scss = ()=>{
             webpClass:  ".webp",
             noWebpClass: ".no-webp"
         }))
+        .pipe(autoprefixer({
+            grid: true,
+            overrideBrowserlist: ["last 3 versions"],
+            cascade: true
+        }))
+        // Раскомментировать если не нужен сжатый файл стилей.
+        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(cleanCss())
         .pipe(rename({
             extname: ".min.css"
         }))
