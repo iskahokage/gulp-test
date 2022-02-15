@@ -1,6 +1,12 @@
 body{
-    background: url("@img/qwerty.jpg") 0 0 no-repeat;
+    background-image: url("@img/qwerty.jpg") 0 0 no-repeat;
+    main{
+        width: 400px;
+        height: 400px;
+        background-image: url("@img/qwerty.jpg");
+        // background-color: #000;
+    }
     span{
-        color: red
+        color: black
     }
 }

@@ -1,8 +1,18 @@
 .no-webp body {
-  background: url("../img/qwerty.jpg") 0 0 no-repeat; }
+  background-image: url("../img/qwerty.jpg") 0 0 no-repeat; }
 
-body span {
-  color: red;
+.no-webp body main {
+  background-image: url("../img/qwerty.jpg"); }
+
+body main {
+  width: 400px;
+  height: 400px;
 }
 
-.webp body { background: url(../img/qwerty.webp) 0 0 no-repeat; }
+body span {
+  color: black;
+}
+
+.webp body { background-image: url(../img/qwerty.webp) 0 0 no-repeat; }
+
+.webp body main { background-image: url(../img/qwerty.webp); }
